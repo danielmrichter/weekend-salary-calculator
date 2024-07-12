@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
   <title>Salary Calculator</title>
 </head>
 <body>
@@ -11,10 +12,59 @@
   </header>
   <main>
     <h2>Add Employee</h2>
-    <h2>Employees</h2>
+    <form>
+      <input 
+      type="text"
+      placeholder="First Name"
+      id="fName"
+      data-testid="firstNameInput"
+      ></input>
+      <input 
+      type="text"
+      placeholder="Last Name"
+      id="lName"
+      data-testid="lastNameInput"
+      ></input>
+      <input 
+      type="number"
+      placeholder="ID"
+      id="idNum"
+      data-testid="idInput"
+      ></input>
+      <input 
+      type="text"
+      placeholder="Job Title"
+      id="jTitle"
+      data-testid="titleInput"
+      ></input>
+      <input 
+      type="number"
+      placeholder="Annual Salary"
+      id="salary"
+      data-testid="annualSalaryInput"
+      ></input>
+      <button id="submit" data-testid="submitButton" onClick="addEmployee(event)">Submit</button>
+    </form>
+    <section>
+      <h2>Emplyoees:</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>ID Number</th>
+            <th>Job Title</th>
+            <th>Annual Salary</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody id = 'tableBody'>
+        </tbody>
+      </table>
+    </section>
   </main>
   <footer>
-    <p>Total Monthly</p>
+    <p>Total Monthly Salary: $0</p>
   </footer>
 </body>
 </html>
