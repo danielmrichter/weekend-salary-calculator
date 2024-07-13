@@ -35,6 +35,24 @@ body {
     background-color: #0aff47;
     text-align: center;
   }
+  .searchStuff {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    margin-left: auto;
+    margin-right: 0px;
+    justify-content: space-around;
+    padding: .5em;
+    margin-top: 1.2em
+  }
+  #searchButton{
+    max-height: 30px
+  }
+  .aboveTable {
+    display: flex;
+    align-content: baseline;
+
+  }
   /* HEADER/FOOTER */
 header, footer {
   height: 100%;

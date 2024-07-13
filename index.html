@@ -46,7 +46,17 @@
       <button id="submit" data-testid="submitButton" onClick="addEmployee(event)">Submit</button>
     </form>
     <section>
-      <h2>Emplyoees:</h2>
+      <span class="aboveTable">
+      <h2>Employees:</h2>
+      <button onClick="populateTable(event)" id = "searchButton" class="searchStuff">Search</button>
+      <form>
+        <input 
+        class ="searchStuff"
+        type="text"
+        placeholder="search"
+        id="search">
+      </form>
+      </span>
       <table>
         <thead>
           <tr>
