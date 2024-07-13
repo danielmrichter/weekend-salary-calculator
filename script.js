@@ -84,7 +84,7 @@ function clearFields(){
 
 function populateTable(popEvent){
     table.innerHTML = ``
-    let searchQuery = document.querySelector(`#search`).value
+    let searchQuery = document.querySelector(`#search`).value.toString()
     console.log(searchQuery)
     if(popEvent === undefined){
         for(let employee of storage){
@@ -103,8 +103,10 @@ function populateTable(popEvent){
         popEvent.preventDefault()
         let returnArray = []
         for(let employee of storage){
-            if(searchQuery === employee.idNum|| searchQuery === employee.lName)
+            for(let entry of Object.values(employee))
+                if(entry.indexOf(searchQuery) > -1){
                 returnArray.push(employee)
+                break}
         }
         for(let match of returnArray){
             table.innerHTML +=`
