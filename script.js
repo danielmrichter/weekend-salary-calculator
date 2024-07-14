@@ -182,10 +182,12 @@ function safetyCheck(){
     }
     if(Number.isInteger(Number(idNum)) === false){
         document.querySelector(`#idNum`).classList.add(`required-box`)
+        document.querySelector(`#required-field`).innerHTML = `*Must be a number`
         return false
     }
     if(Number.isInteger(Number(salary)) === false){
         document.querySelector(`#salary`).classList.add(`required-box`)
+        document.querySelector(`#required-field`).innerHTML = `*Must be a number`
         return false
     }
     return true

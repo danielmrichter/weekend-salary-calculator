@@ -1,53 +1,70 @@
 .over-budget {
     background-color: red;
+    color:white;
+
 }
 .under-budget{
-    background-color: #000000
+    background-color: #000000;
+    color:white;
+
 }
 .zero-budget{
-  background-color: #000000
+  background-color: #000000;
+  color:white;
+
 }
 .five-budget{
+  color:white;
   background: rgb(255,0,0);
   background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,0,0,1) 5%, rgba(0,0,0,1) 5%, rgba(0,0,0,1) 100%); 
 }
 .ten-budget{
+  color:white;
   background: rgb(255,0,0);
   background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,0,0,1) 10%, rgba(0,0,0,1) 10%, rgba(0,0,0,1) 100%); 
 }
 .twenty-budget{
+  color:white;
   background: rgb(255,0,0);
   background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,0,0,1) 20%, rgba(0,0,0,1) 20%, rgba(0,0,0,1) 100%); 
 }
 .thirty-budget{
+  color:white;
   background: rgb(255,0,0);
   background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,0,0,1) 30%, rgba(0,0,0,1) 30%, rgba(0,0,0,1) 100%); 
 }
 .forty-budget{
+  color:white;
   background: rgb(255,0,0);
   background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,0,0,1) 40%, rgba(0,0,0,1) 40%, rgba(0,0,0,1) 100%); 
 }
 .fifty-budget{
+  color:white;
   background: rgb(255,0,0);
   background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,0,0,1) 40%, rgba(0,0,0,1) 40%, rgba(0,0,0,1) 100%); 
 }
 .sixty-budget{
+  color:white;
   background: rgb(255,0,0);
   background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,0,0,1) 60%, rgba(0,0,0,1) 60%, rgba(0,0,0,1) 100%); 
 }
 .seventy-budget{
+  color:white;
   background: rgb(255,0,0);
   background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,0,0,1) 70%, rgba(0,0,0,1) 70%, rgba(0,0,0,1) 100%); 
 }
 .eighty-budget{
+  color:white;
   background: rgb(255,0,0);
   background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,0,0,1) 80%, rgba(0,0,0,1) 80%, rgba(0,0,0,1) 100%); 
 }
 .ninety-budget{
+  color:white;
   background: rgb(255,0,0);
   background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,0,0,1) 90%, rgba(0,0,0,1) 90%, rgba(0,0,0,1) 100%); 
 }
 .ninefive-budget{
+  color:white;
   background: rgb(255,0,0);
   background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,0,0,1) 95%, rgba(0,0,0,1) 95%, rgba(0,0,0,1) 100%); 
 }
@@ -63,7 +80,6 @@
 body {
     background-color: #dcdcdc;
     font-family: 'Roboto', sans-serif;
-    color: #313131;
     font-size: 1.25em;
   }
   /* FLEXBOX LAYOUT */
@@ -77,9 +93,10 @@ body {
   }
   header {
     height: 8em;
-    background-color: #7a7a7a;
+    background-color: #4412b8;
     text-align: center;
   }
+ 
   main {
     flex: auto;
     max-width: 80%;
@@ -113,9 +130,6 @@ header, footer {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-h1 {
-  font-size: 2.5em;
 }
 
 
@@ -155,4 +169,11 @@ tbody tr:nth-child(odd){
 }
 tbody tr:nth-child(even){
   background: #dcdcdc;
+}
+.main-titles{
+    font-size: 2.5em;
+    color: #454545;
+}
+.salary-title{
+  color: whitesmoke
 }
