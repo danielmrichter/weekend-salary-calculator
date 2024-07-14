@@ -1,5 +1,7 @@
 let storage = []
 let table = document.querySelector(`#tableBody`)
+let footer = document.querySelector(`footer`)
+let monthlySalary = 0
 function addEmployee(event){
     event.preventDefault()
     let fName = document.querySelector('#fName').value
@@ -7,7 +9,10 @@ function addEmployee(event){
     let idNum = document.querySelector('#idNum').value
     let jTitle = document.querySelector('#jTitle').value
     let salary = document.querySelector('#salary').value
-    for(let i = 0; i < storage.length; i++){
+    if(safetyCheck()=== false){
+        return
+    }
+     for(let i = 0; i < storage.length; i++){
         if(storage[i].idNum === idNum){
             window.alert(`Employee ID already exists!`)
             return
@@ -34,19 +39,12 @@ function addEmployee(event){
     clearFields()
     populateTable()
 }
-let monthlySalary = 0
 function calculateMonthly(num){
-    let footer = document.querySelector(`footer`)
-    console.log(`num is:`,num)
-    monthlySalary += (num/12)
+    monthlySalary += Math.round((num/12))
     footer.innerHTML = `
     <p>Total Monthly Salary: $${monthlySalary}</p>`
-    if(monthlySalary>20000){
-        footer.classList.remove(`under-budget`)
-        footer.classList.add(`over-budget`)
-    }
+    monthlyPercent(monthlySalary)
 }
-
 function deleteEmployee(event, inputNum){
     if(confirm(`Are you sure you'd like to delete this entry?`))
     for(let i = 0; i < storage.length; i++){
@@ -58,30 +56,20 @@ function deleteEmployee(event, inputNum){
     }
     event.target.parentElement.parentElement.remove()
 }
-
 function subtractMonthly(num){
-    let footer = document.querySelector(`footer`)
-    monthlySalary -= (num/12)
+    monthlySalary -= Math.round((num/12))
     footer.innerHTML = `
     <p>Total Monthly Salary: $${monthlySalary}</p>`
-    if(footer.classList.contains(`over-budget`)){
-        console.log(`checking budget!`)
-        if(monthlySalary < 20000){
-            footer.classList.remove(`over-budget`)
-            footer.classList.add(`under-budget`)
-        }
-    }
+    monthlyPercent(monthlySalary)
 }
-
-
 function clearFields(){
     fName.value = ``
     lName.value = ``
     idNum.value = ``
     jTitle.value = ``
     salary.value = ``
+    document.querySelector(`#search`).value = ``
 }
-
 function populateTable(popEvent){
     table.innerHTML = ``
     let searchQuery = document.querySelector(`#search`).value.toString()
@@ -123,4 +111,82 @@ function populateTable(popEvent){
     }else{
         window.alert(`Error!`)
     }
+}
+function monthlyPercent(num){
+    let percentNum = num/20000
+    footer.className = ``
+    if(percentNum === 0){
+        footer.classList.add(`zero-budget`)
+    } else if(percentNum < .05){
+        footer.classList.add(`five-budget`)
+    } else if(percentNum <.10){
+        footer.classList.add(`ten-budget`)
+    } else if(percentNum <.2){
+        footer.classList.add(`twenty-budget`)
+    } else if(percentNum <.3){
+        footer.classList.add(`thirty-budget`)
+    } else if(percentNum <.4){
+        footer.classList.add(`forty-budget`)
+    } else if(percentNum <.5){
+        footer.classList.add(`fifty-budget`)
+    } else if(percentNum <.6){
+        footer.classList.add(`sixty-budget`)
+    } else if(percentNum <.7){
+        footer.classList.add(`seventy-budget`)
+    } else if(percentNum <.8){
+        footer.classList.add(`eighty-budget`)
+    } else if(percentNum <.9){
+        footer.classList.add(`ninety-budget`)
+    } else if(percentNum <.95){
+        footer.classList.add(`ninefive-budget`)
+    }else if(percentNum <= 1){
+        footer.classList.add(`over-budget`)
+    }
+}
+function safetyCheck(){
+    let fName = document.querySelector('#fName').value
+    let lName = document.querySelector('#lName').value
+    let idNum = document.querySelector('#idNum').value
+    let jTitle = document.querySelector('#jTitle').value
+    let salary = document.querySelector('#salary').value
+    document.querySelector(`#required-field`).innerHTML = ``
+    document.querySelector('#fName').classList = ``
+    document.querySelector('#lName').classList = ``
+    document.querySelector('#idNum').classList = ``
+    document.querySelector('#jTitle').classList = ``
+    document.querySelector('#salary').classList = ``
+    if(fName === ``){
+        document.querySelector('#fName').classList.add(`required-box`)
+        document.querySelector(`#required-field`).innerHTML = `*required`
+        return false
+    }
+    if(lName === ``){
+        document.querySelector('#lName').classList.add(`required-box`)
+        document.querySelector(`#required-field`).innerHTML = `*required`
+        return false
+    }
+    if(idNum === ``){
+        document.querySelector('#idNum').classList.add(`required-box`)
+        document.querySelector(`#required-field`).innerHTML = `*required`
+        return false
+    }
+    if(jTitle === ``){
+        document.querySelector('#jTitle').classList.add(`required-box`)
+        document.querySelector(`#required-field`).innerHTML = `*required`
+        return false
+    }
+    if(salary === ``){
+        document.querySelector(`#salary`).classList.add(`required-box`)
+        document.querySelector(`#required-field`).innerHTML = `*required`
+        return false
+    }
+    if(Number.isInteger(Number(idNum)) === false){
+        document.querySelector(`#idNum`).classList.add(`required-box`)
+        return false
+    }
+    if(Number.isInteger(Number(salary)) === false){
+        document.querySelector(`#salary`).classList.add(`required-box`)
+        return false
+    }
+    return true
 }

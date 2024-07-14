@@ -2,7 +2,62 @@
     background-color: red;
 }
 .under-budget{
-    background-color: #0aff47
+    background-color: #000000
+}
+.zero-budget{
+  background-color: #000000
+}
+.five-budget{
+  background: rgb(255,0,0);
+  background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,0,0,1) 5%, rgba(0,0,0,1) 5%, rgba(0,0,0,1) 100%); 
+}
+.ten-budget{
+  background: rgb(255,0,0);
+  background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,0,0,1) 10%, rgba(0,0,0,1) 10%, rgba(0,0,0,1) 100%); 
+}
+.twenty-budget{
+  background: rgb(255,0,0);
+  background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,0,0,1) 20%, rgba(0,0,0,1) 20%, rgba(0,0,0,1) 100%); 
+}
+.thirty-budget{
+  background: rgb(255,0,0);
+  background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,0,0,1) 30%, rgba(0,0,0,1) 30%, rgba(0,0,0,1) 100%); 
+}
+.forty-budget{
+  background: rgb(255,0,0);
+  background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,0,0,1) 40%, rgba(0,0,0,1) 40%, rgba(0,0,0,1) 100%); 
+}
+.fifty-budget{
+  background: rgb(255,0,0);
+  background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,0,0,1) 40%, rgba(0,0,0,1) 40%, rgba(0,0,0,1) 100%); 
+}
+.sixty-budget{
+  background: rgb(255,0,0);
+  background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,0,0,1) 60%, rgba(0,0,0,1) 60%, rgba(0,0,0,1) 100%); 
+}
+.seventy-budget{
+  background: rgb(255,0,0);
+  background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,0,0,1) 70%, rgba(0,0,0,1) 70%, rgba(0,0,0,1) 100%); 
+}
+.eighty-budget{
+  background: rgb(255,0,0);
+  background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,0,0,1) 80%, rgba(0,0,0,1) 80%, rgba(0,0,0,1) 100%); 
+}
+.ninety-budget{
+  background: rgb(255,0,0);
+  background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,0,0,1) 90%, rgba(0,0,0,1) 90%, rgba(0,0,0,1) 100%); 
+}
+.ninefive-budget{
+  background: rgb(255,0,0);
+  background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,0,0,1) 95%, rgba(0,0,0,1) 95%, rgba(0,0,0,1) 100%); 
+}
+.required-box{
+  border-style: dashed;
+  color:red;
+}
+.required-text{
+  color:red;
+  font-size: .6em;
 }
 /* GLOBAL TYPOGRAPHY */
 body {
@@ -32,7 +87,6 @@ body {
   }
   footer {
     height: 8em;
-    background-color: #0aff47;
     text-align: center;
   }
   .searchStuff {
