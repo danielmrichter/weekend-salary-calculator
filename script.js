@@ -92,7 +92,7 @@ function populateTable(popEvent){
         let returnArray = []
         for(let employee of storage){
             for(let entry of Object.values(employee))
-                if(entry.indexOf(searchQuery) > -1){
+                if(entry.toLowerCase().indexOf(searchQuery.toLowerCase()) > -1){
                 returnArray.push(employee)
                 break}
         }

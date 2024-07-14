@@ -1,9 +1,11 @@
-# Project Name
-
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
+# SALARY CALCULATOR
 
 ## Description
 
-Your project description goes here. What problem did you solve? How did you solve it?
+_Duration: 3 days_
 
-Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
+This is an app to track employees in a database and budget for a salary. It will calculate the salary vs a cap (default 20,000) and if you exceed that budget, apply a visual indicator to let you know. The bottom will progressively fill up to show you how much of your monthly budget you are using up.
+
+The search function will search your current inputs for a match or partial match. To clear, simply search nothing or input a new entry.
+## Support
+If you have suggestions or issues, please email me at [drichter3697@gmail.com](drichter3697@gmail.com)
