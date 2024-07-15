@@ -139,7 +139,7 @@ function monthlyPercent(num){
         footer.classList.add(`ninety-budget`)
     } else if(percentNum <.95){
         footer.classList.add(`ninefive-budget`)
-    }else if(percentNum <= 1){
+    }else if(percentNum >= 1){
         footer.classList.add(`over-budget`)
     }
 }
